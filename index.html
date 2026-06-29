@@ -8,6 +8,12 @@
 <meta property="og:title" content="GameTrack — Sua jornada gamer em um só lugar">
 <meta property="og:description" content="Rastreie seus jogos, horas e conquistas. Suba de nível. GameTrack é o seu hub pessoal de jogos.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://diaselegaletalvez.github.io/gametrack-site/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://diaselegaletalvez.github.io/gametrack-site/og-image.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -30,7 +36,7 @@
   nav{position:sticky;top:0;z-index:50;background:rgba(11,11,15,.72);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
   .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
   .logo{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:19px;letter-spacing:-.3px}
-  .logo .mark{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--primary),#3FA9FF);display:grid;place-items:center;font-size:15px}
+  .logo .mark{width:30px;height:30px;border-radius:9px;object-fit:cover;border:1px solid var(--border)}
   .nav-links{display:flex;align-items:center;gap:26px;font-size:14px;color:var(--muted)}
   .nav-links a:hover{color:var(--text)}
   .nav-cta{background:var(--primary);color:#fff;padding:9px 16px;border-radius:10px;font-weight:600;font-size:14px}
@@ -101,6 +107,17 @@
   .dl-box p{color:var(--muted);margin-bottom:28px}
   .dl-box .dls{justify-content:center}
 
+  /* EMAIL CAPTURE */
+  .notify{margin-top:30px;border-top:1px solid var(--border);padding-top:26px}
+  .notify p{color:var(--muted);margin-bottom:14px;font-size:15px}
+  .notify form{display:flex;gap:10px;max-width:440px;margin:0 auto;flex-wrap:wrap}
+  .notify input{flex:1;min-width:200px;background:var(--bg);border:1px solid var(--border);border-radius:11px;padding:13px 15px;color:var(--text);font-family:var(--body);font-size:15px}
+  .notify input::placeholder{color:var(--muted)}
+  .notify input:focus{border-color:var(--primary);outline:none}
+  .notify button{background:var(--primary);color:#fff;border:0;border-radius:11px;padding:13px 22px;font-family:var(--display);font-weight:600;font-size:15px;cursor:pointer;transition:background .2s}
+  .notify button:hover{background:var(--primary2)}
+  .notify .ok{color:var(--green);font-size:14px;margin-top:12px;display:none}
+
   /* FAQ */
   .faq details{border:1px solid var(--border);border-radius:14px;padding:0 20px;margin-bottom:12px;background:var(--card);overflow:hidden}
   .faq summary{font-family:var(--display);font-weight:600;font-size:16px;padding:18px 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
@@ -108,6 +125,56 @@
   .faq summary::after{content:'+';color:var(--primary2);font-size:22px;font-weight:400;transition:transform .2s}
   .faq details[open] summary::after{transform:rotate(45deg)}
   .faq p{color:var(--muted);font-size:15px;padding:0 0 20px}
+
+  /* COMO FUNCIONA */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:760px){.steps{grid-template-columns:1fr}}
+  .step{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:26px}
+  .step .num{font-family:var(--mono);font-size:14px;color:var(--primary2);border:1px solid var(--border);width:38px;height:38px;border-radius:11px;display:grid;place-items:center;margin-bottom:16px;background:var(--card2)}
+  .step h3{font-family:var(--display);font-size:18px;margin-bottom:7px}
+  .step p{color:var(--muted);font-size:14px}
+
+  /* SHOWCASE / MOCKUPS */
+  .showcase{background:linear-gradient(180deg,var(--bg2),var(--bg));border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+  .phones{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+  .phone{width:236px;background:#05050a;border:9px solid #181820;border-radius:36px;padding:14px 12px 18px;box-shadow:0 36px 80px -34px rgba(109,74,255,.55)}
+  .pscr{background:var(--bg);border-radius:24px;padding:15px;min-height:438px;display:flex;flex-direction:column;gap:10px}
+  .m-brand{font-family:var(--display);font-weight:700;font-size:15px}
+  .m-sub{color:var(--muted);font-size:10px;margin-top:-4px}
+  .m-h{font-family:var(--display);font-weight:700;font-size:16px;margin-top:2px}
+  .m-card{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:11px}
+  .m-lvlrow{display:flex;justify-content:space-between;font-size:10px;color:var(--muted);margin-bottom:6px}
+  .m-bar{height:7px;border-radius:99px;background:#23232f;overflow:hidden}
+  .m-bar i{display:block;height:100%;width:64%;background:linear-gradient(90deg,var(--primary),#3FA9FF)}
+  .m-tiles{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .m-tile{background:var(--card);border:1px solid var(--border);border-radius:11px;padding:9px}
+  .m-tile small{color:var(--muted);font-size:9px;display:block}
+  .m-tile b{font-family:var(--display);font-size:18px}
+  .m-row{display:flex;align-items:center;justify-content:space-between;background:var(--card);border:1px solid var(--border);border-radius:11px;padding:9px 11px}
+  .m-row .t{font-size:12px;font-weight:600}
+  .m-row .mt{color:var(--muted);font-size:9px;margin-top:1px}
+  .m-badge{font-family:var(--mono);font-size:8px;font-weight:700;padding:2px 7px;border-radius:99px;color:#0E0B16}
+  .m-xp{color:var(--gold);font-size:10px;font-weight:700;font-family:var(--mono)}
+  .phone-cap{text-align:center;color:var(--muted);font-size:13px;margin-top:12px;font-family:var(--mono)}
+
+  /* PLANOS */
+  .pay-note{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--muted);font-size:13px;margin-bottom:26px;display:flex;gap:10px;align-items:flex-start}
+  .pay-note b{color:var(--text)}
+  .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+  .plan{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:24px;display:flex;flex-direction:column}
+  .plan.feat{border-color:var(--primary);box-shadow:0 24px 60px -36px rgba(109,74,255,.7)}
+  .plan .rec{align-self:flex-start;font-family:var(--mono);font-size:10px;letter-spacing:1px;background:var(--primary);color:#fff;padding:3px 9px;border-radius:99px;margin-bottom:12px;text-transform:uppercase}
+  .plan h3{font-family:var(--display);font-size:20px}
+  .plan .price{font-family:var(--display);font-weight:700;font-size:32px;margin:8px 0 2px}
+  .plan .price span{font-size:13px;color:var(--muted);font-weight:500}
+  .plan .pdesc{color:var(--muted);font-size:13px;margin-bottom:16px;min-height:34px}
+  .plan ul{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:20px;flex:1}
+  .plan li{font-size:13px;color:#d7d7de;display:flex;gap:8px;align-items:flex-start;line-height:1.4}
+  .plan li::before{content:'✓';color:var(--green);font-weight:700}
+  .plan li.soon{color:var(--muted)}
+  .plan li.soon::before{content:'◷';color:var(--primary2)}
+  .plan .pbtn{text-align:center;border:1px solid var(--border);border-radius:11px;padding:11px;font-family:var(--display);font-weight:600;font-size:14px;color:var(--muted);background:var(--card2)}
+  .plan.feat .pbtn{background:var(--primary);color:#fff;border-color:var(--primary)}
 
   /* FOOTER */
   footer{border-top:1px solid var(--border);padding:34px 0;color:var(--muted);font-size:14px}
@@ -122,9 +189,10 @@
 
 <nav>
   <div class="wrap nav-in">
-    <div class="logo"><span class="mark">🎮</span> GameTrack</div>
+    <div class="logo"><img class="mark" src="apple-touch-icon.png" alt="GameTrack"> GameTrack</div>
     <div class="nav-links">
       <a href="#recursos">Recursos</a>
+      <a href="#planos">Planos</a>
       <a href="#baixar">Baixar</a>
       <a href="#faq">FAQ</a>
       <a href="#baixar" class="nav-cta">Quero o app</a>
@@ -189,6 +257,69 @@
   </div>
 </section>
 
+<section id="como">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Simples assim</span>
+      <h2>Como funciona</h2>
+      <p>Do download ao próximo nível em três passos.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="num">01</div><h3>Baixe o app</h3><p>Instale no celular ou no computador. Crie sua conta em segundos e entre no seu hub.</p></div>
+      <div class="step"><div class="num">02</div><h3>Registre seus jogos</h3><p>Adicione os jogos que você joga, suas horas e conquistas. Marque favoritos e status.</p></div>
+      <div class="step"><div class="num">03</div><h3>Evolua</h3><p>Ganhe XP e pontos, suba de nível, colecione pets e veja sua jornada crescer no painel.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="app" class="showcase">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Dá uma espiada</span>
+      <h2>Veja o app por dentro</h2>
+      <p>Uma prévia das telas — escuro, limpo e feito pra quem joga.</p>
+    </div>
+    <div class="phones">
+
+      <div class="phone"><div class="pscr">
+        <div><div class="m-brand">GameTrack</div><div class="m-sub">Hub de Jogos</div></div>
+        <div class="m-h">Painel</div>
+        <div class="m-card">
+          <div class="m-lvlrow"><span>Nível 7</span><span class="mono" style="color:#fff">720 / 1000 XP</span></div>
+          <div class="m-bar"><i></i></div>
+        </div>
+        <div class="m-tiles">
+          <div class="m-tile"><small>🎮 Jogos</small><b>24</b></div>
+          <div class="m-tile"><small>⏱ Horas</small><b>318h</b></div>
+          <div class="m-tile"><small>🏆 Conquistas</small><b>57</b></div>
+          <div class="m-tile"><small>◆ Pontos</small><b>2.4k</b></div>
+        </div>
+      </div></div>
+
+      <div class="phone"><div class="pscr">
+        <div class="m-h">Meus Jogos</div>
+        <div class="m-sub" style="margin-top:0">12 na biblioteca</div>
+        <div class="m-row"><div><div class="t">★ Hollow Knight</div><div class="mt">PC · Jogando · 35h</div></div></div>
+        <div class="m-row"><div><div class="t">Elden Ring</div><div class="mt">Steam · Zerado · 120h</div></div></div>
+        <div class="m-row"><div><div class="t">Stardew Valley</div><div class="mt">Switch · Jogando · 64h</div></div></div>
+        <div class="m-row"><div><div class="t">★ Hades II</div><div class="mt">PC · Pausado · 22h</div></div></div>
+        <div class="m-row"><div><div class="t">FIFA 25</div><div class="mt">PS5 · Backlog · 5h</div></div></div>
+      </div></div>
+
+      <div class="phone"><div class="pscr">
+        <div class="m-h">Conquistas</div>
+        <div class="m-sub" style="margin-top:0">365 XP · 9 desbloqueadas</div>
+        <div class="m-row"><div><div class="t">Primeira Vitória</div><div class="mt">Hollow Knight</div></div><span class="m-xp">+10</span></div>
+        <div class="m-row"><div><span class="m-badge" style="background:#60A5FA">RARA</span><div class="t" style="margin-top:5px">Maratonista</div></div><span class="m-xp">+25</span></div>
+        <div class="m-row"><div><span class="m-badge" style="background:#A78BFA">ÉPICA</span><div class="t" style="margin-top:5px">Explorador</div></div><span class="m-xp">+50</span></div>
+        <div class="m-row"><div><span class="m-badge" style="background:#F59E0B">LENDÁRIA</span><div class="t" style="margin-top:5px">Imortal</div></div><span class="m-xp">+100</span></div>
+      </div></div>
+
+    </div>
+    <p class="phone-cap">// prévia ilustrativa — as telas reais chegam no lançamento</p>
+  </div>
+</section>
+
 <section id="baixar" class="dl-section">
   <div class="wrap">
     <div class="dl-box">
@@ -201,6 +332,126 @@
         <div class="dl"><span class="soon">Em breve</span><span class="ico">🖥</span><div><small>Instalar no</small><strong>Mac</strong></div></div>
         <div class="dl"><span class="soon">Em breve</span><span class="ico">🪟</span><div><small>Instalar no</small><strong>Windows</strong></div></div>
       </div>
+      <div class="notify">
+        <p>Quer ser avisado assim que o GameTrack lançar?</p>
+        <form action="https://formspree.io/f/xkolbadg" method="POST" onsubmit="return gtNotify(this)">
+          <input type="email" name="email" required placeholder="seu@email.com" aria-label="Seu email">
+          <input type="hidden" name="_subject" value="Novo interessado no GameTrack">
+          <button type="submit">Me avise</button>
+        </form>
+        <div class="ok" id="notifyOk">Pronto! Você será avisado no lançamento. 🎮</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="planos">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Planos</span>
+      <h2>Escolha como quer jogar</h2>
+      <p>Comece de graça. Quando quiser mais, faça upgrade.</p>
+    </div>
+    <div class="pay-note">
+      <span>💳</span>
+      <div>Pagamento via <b>InfinitePay</b> e ativação por código chegam no lançamento. Por enquanto, os planos abaixo são uma prévia dos preços.</div>
+    </div>
+    <div class="plans">
+
+      <div class="plan">
+        <h3>Grátis</h3>
+        <div class="price">R$ 0 <span>/ pra sempre</span></div>
+        <p class="pdesc">Pra começar a registrar sua jornada.</p>
+        <ul>
+          <li>Biblioteca de jogos</li>
+          <li>Registro de horas (manual)</li>
+          <li>Conquistas principais</li>
+          <li>Acesso à comunidade</li>
+        </ul>
+        <div class="pbtn">Plano inicial</div>
+      </div>
+
+      <div class="plan">
+        <h3>Basic</h3>
+        <div class="price">R$ 20 <span>/ vitalício</span></div>
+        <p class="pdesc">Pro jogador casual que quer mais.</p>
+        <ul>
+          <li>Tudo do Grátis</li>
+          <li>Relatórios semanais</li>
+          <li>Stats por gênero e status</li>
+          <li>Sem anúncios</li>
+        </ul>
+        <div class="pbtn">Em breve</div>
+      </div>
+
+      <div class="plan feat">
+        <span class="rec">Recomendado</span>
+        <h3>Premium</h3>
+        <div class="price">R$ 50 <span>/ vitalício</span></div>
+        <p class="pdesc">Pro jogador sério e data-driven.</p>
+        <ul>
+          <li>Tudo do Basic</li>
+          <li>Estatísticas avançadas</li>
+          <li>Backup em nuvem</li>
+          <li>Suporte prioritário</li>
+          <li class="soon">Sugestões por IA</li>
+        </ul>
+        <div class="pbtn">Em breve</div>
+      </div>
+
+      <div class="plan">
+        <h3>Elite</h3>
+        <div class="price">R$ 100 <span>/ vitalício</span></div>
+        <p class="pdesc">A experiência completa.</p>
+        <ul>
+          <li>Tudo do Premium</li>
+          <li>Comparação com amigos</li>
+          <li>Personalização do painel</li>
+          <li>Suporte VIP</li>
+          <li class="soon">Acesso antecipado a novidades</li>
+        </ul>
+        <div class="pbtn">Em breve</div>
+      </div>
+
+      <div class="plan">
+        <h3>Família</h3>
+        <div class="price">R$ 75 <span>/ vitalício</span></div>
+        <p class="pdesc">Pra gerenciar a galera de casa.</p>
+        <ul>
+          <li>Benefícios do Premium</li>
+          <li>Até 4 perfis</li>
+          <li>Relatórios de atividade</li>
+          <li>Metas e limites por perfil</li>
+        </ul>
+        <div class="pbtn">Em breve</div>
+      </div>
+
+      <div class="plan">
+        <h3>Escolar</h3>
+        <div class="price">R$ 100 <span>/ por ano</span></div>
+        <p class="pdesc">Pra escolas acompanharem turmas.</p>
+        <ul>
+          <li>Painel de professor</li>
+          <li>Gestão de turmas e alunos</li>
+          <li>Relatórios por aluno</li>
+          <li>Metas e limites de tempo</li>
+        </ul>
+        <div class="pbtn">Em breve</div>
+      </div>
+
+      <div class="plan">
+        <h3>Youtuber</h3>
+        <div class="price">R$ 80 <span>/ vitalício</span></div>
+        <p class="pdesc">Pra criadores de conteúdo gamer.</p>
+        <ul>
+          <li>Tudo do Premium</li>
+          <li>Destaque na comunidade</li>
+          <li class="soon">Ideias e roteiros por IA</li>
+          <li class="soon">Análise de engajamento</li>
+        </ul>
+        <div class="pbtn">Em breve</div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -221,10 +472,21 @@
 
 <footer>
   <div class="wrap foot-in">
-    <div class="logo" style="font-size:16px"><span class="mark" style="width:26px;height:26px;font-size:13px">🎮</span> GameTrack</div>
+    <div class="logo" style="font-size:16px"><img class="mark" src="apple-touch-icon.png" alt="GameTrack" style="width:26px;height:26px"> GameTrack</div>
     <div>© 2026 GameTrack · um produto <a href="#" style="color:var(--primary2)">Dias Inc.</a></div>
   </div>
 </footer>
+
+<script>
+function gtNotify(form){
+  if(form.action.indexOf('FORMSPREE_ID')>-1){ return true; } // ainda sem ID: deixa o envio padrão
+  fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
+    .then(function(r){ if(r.ok){ form.style.display='none'; document.getElementById('notifyOk').style.display='block'; }
+      else { form.submit(); } })
+    .catch(function(){ form.submit(); });
+  return false;
+}
+</script>
 
 </body>
 </html>
