@@ -1,0 +1,237 @@
+<!-- RASCUNHO: revisar com profissional antes de publicar, especialmente cláusulas sobre menores -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Termos de Uso — GameTrack</title>
+<meta name="description" content="Termos de Uso do GameTrack: regras, planos, reembolso e limitações.">
+<meta name="robots" content="index,follow">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0B0B0F; --bg2:#0E0E15; --card:#16161F; --card2:#1C1C28;
+    --border:#262633; --primary:#6D4AFF; --primary2:#8B6BFF;
+    --text:#FFFFFF; --muted:#8A8A95; --green:#22C55E; --gold:#F5B100;
+    --display:'Space Grotesk',sans-serif; --body:'Inter',sans-serif; --mono:'JetBrains Mono',monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:var(--body);line-height:1.7;-webkit-font-smoothing:antialiased}
+  a{color:var(--primary2);text-decoration:none}
+  a:hover{color:var(--text)}
+  .wrap{max-width:820px;margin:0 auto;padding:0 22px}
+
+  nav{position:sticky;top:0;z-index:50;background:rgba(11,11,15,.72);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1080px;margin:0 auto;padding:0 22px}
+  .logo{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:19px;letter-spacing:-.3px;color:var(--text)}
+  .logo .mark{width:30px;height:30px;border-radius:9px;object-fit:cover;border:1px solid var(--border)}
+  .nav-links{display:flex;align-items:center;gap:26px;font-size:14px;color:var(--muted)}
+  .nav-links a{color:var(--muted)}
+  .nav-links a:hover{color:var(--text)}
+
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--primary2)}
+  .legal{padding:64px 0 80px;position:relative}
+  .glow{position:absolute;inset:0 0 auto 0;height:360px;pointer-events:none;background:radial-gradient(620px 280px at 18% 0%,rgba(109,74,255,.15),transparent 70%)}
+  .legal-head{position:relative;margin-bottom:36px}
+  h1{font-family:var(--display);font-weight:700;font-size:clamp(30px,4.5vw,44px);line-height:1.1;letter-spacing:-1px;margin:14px 0 14px}
+  h1 .hl{background:linear-gradient(120deg,var(--primary2),#3FA9FF);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .updated{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:1px}
+  .lead{color:var(--muted);font-size:17px;margin-top:14px;max-width:680px}
+
+  .toc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px 22px;margin:28px 0 40px}
+  .toc strong{font-family:var(--display);font-size:14px;display:block;margin-bottom:10px;color:var(--text)}
+  .toc ol{list-style:none;counter-reset:t;column-count:2;column-gap:24px}
+  @media(max-width:640px){.toc ol{column-count:1}}
+  .toc li{counter-increment:t;font-size:14px;margin-bottom:6px;break-inside:avoid}
+  .toc li::before{content:counter(t,decimal-leading-zero) ".";font-family:var(--mono);color:var(--primary2);margin-right:8px;font-size:12px}
+
+  article{font-size:16px;color:#d7d7de}
+  article h2{font-family:var(--display);font-weight:700;font-size:24px;letter-spacing:-.4px;color:var(--text);margin:48px 0 14px;padding-top:8px;scroll-margin-top:80px}
+  article h2 .num{font-family:var(--mono);font-size:14px;color:var(--primary2);margin-right:10px;font-weight:500}
+  article h3{font-family:var(--display);font-weight:600;font-size:18px;color:var(--text);margin:24px 0 8px}
+  article p{margin:0 0 14px}
+  article ul{list-style:none;margin:0 0 16px;padding:0}
+  article ul li{position:relative;padding-left:22px;margin-bottom:8px}
+  article ul li::before{content:'';position:absolute;left:6px;top:11px;width:6px;height:6px;border-radius:99px;background:var(--primary2)}
+  article b,article strong{color:var(--text);font-weight:600}
+  .callout{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:12px;padding:18px 20px;margin:18px 0;color:#d7d7de;font-size:15px}
+  .callout b{color:var(--text)}
+  .draft{background:rgba(245,177,0,.08);border:1px solid rgba(245,177,0,.4);border-radius:12px;padding:14px 18px;margin:0 0 28px;color:var(--gold);font-size:13px;font-family:var(--mono)}
+  .placeholder{background:var(--card2);border:1px dashed var(--border);border-radius:6px;padding:1px 8px;font-family:var(--mono);font-size:13px;color:var(--gold)}
+
+  footer{border-top:1px solid var(--border);padding:34px 0;color:var(--muted);font-size:14px;margin-top:40px}
+  .foot-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;max-width:1080px;margin:0 auto;padding:0 22px}
+  .foot-links{display:flex;gap:18px;flex-wrap:wrap}
+  .foot-links a{color:var(--muted)}
+  .foot-links a:hover{color:var(--text)}
+
+  :focus-visible{outline:2px solid var(--primary2);outline-offset:3px;border-radius:6px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html"><img class="mark" src="apple-touch-icon.png" alt="GameTrack"> GameTrack</a>
+    <div class="nav-links">
+      <a href="index.html">← Voltar ao site</a>
+    </div>
+  </div>
+</nav>
+
+<main class="legal">
+  <div class="glow"></div>
+  <div class="wrap">
+    <header class="legal-head">
+      <span class="eyebrow">Documento legal</span>
+      <h1>Termos <span class="hl">de Uso</span></h1>
+      <div class="updated">Última atualização: <span class="placeholder">[DATA]</span></div>
+      <p class="lead">Ao criar conta no GameTrack e usar o app, você concorda com estes Termos. Leia com atenção — eles definem direitos e deveres das duas partes.</p>
+    </header>
+
+    <div class="draft">⚠ RASCUNHO — não publicar sem revisão por um profissional. Atenção especial às cláusulas sobre menores, reembolso e responsabilidade.</div>
+
+    <div class="toc">
+      <strong>Conteúdo</strong>
+      <ol>
+        <li><a href="#aceite">Aceitação</a></li>
+        <li><a href="#servico">O que é o GameTrack</a></li>
+        <li><a href="#elegibilidade">Elegibilidade e idade mínima</a></li>
+        <li><a href="#conta">Sua conta</a></li>
+        <li><a href="#regras">Regras de uso</a></li>
+        <li><a href="#planos">Planos pagos e ativação</a></li>
+        <li><a href="#pagamento">Pagamento via InfinitePay</a></li>
+        <li><a href="#reembolso">Reembolso e arrependimento</a></li>
+        <li><a href="#ia">Conteúdo gerado por IA</a></li>
+        <li><a href="#pi">Propriedade intelectual</a></li>
+        <li><a href="#disponibilidade">Disponibilidade e mudanças</a></li>
+        <li><a href="#suspensao">Suspensão e encerramento</a></li>
+        <li><a href="#responsabilidade">Limitação de responsabilidade</a></li>
+        <li><a href="#lei">Lei aplicável e foro</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ol>
+    </div>
+
+    <article>
+
+      <h2 id="aceite"><span class="num">01</span>Aceitação destes Termos</h2>
+      <p>Estes Termos de Uso são um contrato entre você (“usuário”) e <span class="placeholder">[NOME DA EMPRESA]</span>, CNPJ <span class="placeholder">[CNPJ se houver]</span> (“nós”, “GameTrack”). Ao criar uma conta, baixar o app ou utilizar qualquer funcionalidade do GameTrack, você declara que leu, entendeu e concorda com estes Termos e com a nossa <a href="privacidade.html">Política de Privacidade</a>. Se você não concorda, não use o app.</p>
+
+      <h2 id="servico"><span class="num">02</span>O que é o GameTrack</h2>
+      <p>O GameTrack é um aplicativo para iOS, Android, macOS e Windows que permite que você registre manualmente jogos, horas jogadas, conquistas e estatísticas, acompanhe sua evolução com XP e níveis, colecione recompensas virtuais (pets, itens da loja) e interaja com uma comunidade de jogadores. As funcionalidades específicas variam conforme o plano contratado.</p>
+
+      <h2 id="elegibilidade"><span class="num">03</span>Elegibilidade e idade mínima</h2>
+      <p>Para usar o GameTrack você deve ter pelo menos <b>13 anos</b> completos. Usuários com idade entre 13 e 17 anos só podem se cadastrar com ciência e autorização dos pais ou responsáveis legais, conforme o Estatuto da Criança e do Adolescente (ECA) e a Lei Geral de Proteção de Dados (LGPD).</p>
+      <p>Perfis infantis dentro do Plano Família são gerenciados por uma conta principal de responsável legal, que é o titular legal dos dados e do consentimento perante o GameTrack.</p>
+      <p>Ao se cadastrar, você declara que as informações fornecidas, inclusive a data de nascimento, são verdadeiras. Detectada inconsistência, podemos suspender ou encerrar sua conta.</p>
+
+      <h2 id="conta"><span class="num">04</span>Sua conta</h2>
+      <ul>
+        <li>Você é responsável por manter suas credenciais (e-mail e senha) em segurança. Não compartilhe sua senha com ninguém.</li>
+        <li>Você é responsável por toda atividade realizada na sua conta.</li>
+        <li>Avise a gente imediatamente em <a href="mailto:[EMAIL DE SUPORTE]">[EMAIL DE SUPORTE]</a> se suspeitar de acesso não autorizado.</li>
+        <li>Cada pessoa pode manter <b>uma única conta principal</b>. Múltiplas contas para burlar limites de plano podem ser suspensas.</li>
+      </ul>
+
+      <h2 id="regras"><span class="num">05</span>Regras de uso</h2>
+      <p>Ao usar o GameTrack, você se compromete a não:</p>
+      <ul>
+        <li>Publicar conteúdo ilegal, ofensivo, discriminatório, violento, sexualmente explícito ou que viole direitos de terceiros.</li>
+        <li>Usar gametag, foto ou descrição que se passem por outra pessoa ou marca.</li>
+        <li>Praticar assédio, bullying ou intimidação contra outros usuários — em especial menores.</li>
+        <li>Tentar acessar áreas restritas, fazer engenharia reversa, descompilar, copiar ou redistribuir o app.</li>
+        <li>Utilizar bots, scripts ou automações para inflar XP, conquistas, pontos ou qualquer métrica do app.</li>
+        <li>Vender, alugar, transferir ou compartilhar sua conta ou um código de ativação de plano com terceiros.</li>
+        <li>Sobrecarregar nossos servidores ou tentar interromper o funcionamento do serviço.</li>
+        <li>Coletar dados de outros usuários sem autorização.</li>
+      </ul>
+      <p>Descumprir essas regras pode levar à advertência, suspensão temporária ou encerramento definitivo da conta, sem direito a reembolso.</p>
+
+      <h2 id="planos"><span class="num">06</span>Planos pagos e ativação</h2>
+      <p>O GameTrack oferece um plano gratuito e planos pagos com recursos adicionais (Basic, Premium, Elite, Família, Escolar, Youtuber e outros que possam ser criados). Os recursos e preços vigentes estão descritos na seção de planos do nosso site e/ou dentro do app.</p>
+
+      <h3>Vitalício ou recorrente</h3>
+      <p>A maioria dos planos é oferecida como <b>licença vitalícia</b>: você paga uma única vez e mantém acesso enquanto o serviço estiver no ar e enquanto cumprir estes Termos. Alguns planos (como o Escolar) podem ser anuais ou recorrentes — a modalidade exata fica clara antes da compra. “Vitalício” significa pela vida útil do produto, e não significa garantia de operação por tempo indeterminado.</p>
+
+      <h3>Ativação por código</h3>
+      <p>Após o pagamento, você recebe um <b>código de ativação único</b> que deve ser inserido dentro do app, em <b>Configurações → Plano → Ativar código</b>. O código é vinculado à sua conta e <b>não pode ser revendido, transferido ou compartilhado</b>. Códigos compartilhados serão invalidados sem reembolso.</p>
+
+      <h2 id="pagamento"><span class="num">07</span>Pagamento via InfinitePay</h2>
+      <p>Os planos pagos do GameTrack são processados <b>fora do app</b>, por meio da <b>InfinitePay</b>, em uma página externa de checkout. Isso significa que:</p>
+      <ul>
+        <li>Os dados de pagamento (cartão, Pix, boleto) são fornecidos diretamente à InfinitePay, que é a controladora desses dados e processa a transação.</li>
+        <li>O GameTrack <b>não armazena</b> número de cartão de crédito nem credenciais bancárias.</li>
+        <li>A confirmação de pagamento é enviada à gente pela InfinitePay, e então o código de ativação é gerado e entregue ao seu e-mail.</li>
+        <li>Eventuais disputas de cobrança seguem também as políticas da InfinitePay, sem prejuízo dos seus direitos como consumidor.</li>
+      </ul>
+
+      <h2 id="reembolso"><span class="num">08</span>Reembolso e direito de arrependimento</h2>
+      <p>Conforme o art. 49 do Código de Defesa do Consumidor (CDC), você tem o direito de se arrepender da compra em até <b>7 dias corridos</b> contados a partir da confirmação do pagamento, recebendo reembolso integral do valor pago, <b>desde que o código de ativação ainda não tenha sido utilizado</b>.</p>
+      <p>Após o código ser ativado e os recursos pagos do plano serem liberados na sua conta, considera-se que o serviço foi prestado, e o reembolso passa a depender de análise caso a caso (por exemplo, falha técnica não resolvida em prazo razoável).</p>
+      <p>Para solicitar reembolso, escreva para <a href="mailto:[EMAIL DE SUPORTE]">[EMAIL DE SUPORTE]</a> a partir do e-mail cadastrado, informando o código de pedido da InfinitePay. Confirmado o direito, o reembolso será efetuado pela mesma forma de pagamento original em até 7 dias úteis.</p>
+
+      <h2 id="ia"><span class="num">09</span>Conteúdo gerado por IA</h2>
+      <div class="callout">
+        <b>Recursos de inteligência artificial</b> (como sugestões de jogos, ideias de roteiro nos planos Premium/Elite/Youtuber e outras) produzem sugestões automatizadas. Esse conteúdo é <b>auxílio, e não verdade garantida</b>: pode conter informações incorretas, desatualizadas ou inadequadas ao seu caso. Use com discernimento — você é responsável pelas decisões tomadas a partir das sugestões.
+      </div>
+      <p>Não usamos seu conteúdo pessoal para treinar modelos de IA disponibilizados a terceiros. Mais detalhes na <a href="privacidade.html">Política de Privacidade</a>.</p>
+
+      <h2 id="pi"><span class="num">10</span>Propriedade intelectual</h2>
+      <p>Todos os direitos sobre o app GameTrack — marca, logo, código-fonte, design, layout, textos, animações, mascotes (pets), conquistas, sistemas de XP e demais elementos — pertencem a <span class="placeholder">[NOME DA EMPRESA]</span> ou aos seus licenciantes.</p>
+      <p>Você recebe uma <b>licença pessoal, intransferível, não exclusiva e revogável</b> para usar o app conforme estes Termos. Nada nestes Termos transfere a você qualquer direito de propriedade sobre o GameTrack.</p>
+      <p>Os dados que <b>você</b> insere (sua biblioteca, suas conquistas, suas notas, comentários da comunidade) continuam sendo seus — você apenas nos concede licença para armazená-los, exibi-los a você e a outros usuários conforme as configurações que escolher, e operar o app.</p>
+
+      <h2 id="disponibilidade"><span class="num">11</span>Disponibilidade e mudanças no serviço</h2>
+      <p>Nos esforçamos para manter o GameTrack disponível 24/7, mas podem ocorrer interrupções por manutenção, falhas de infraestrutura, ataques ou caso fortuito. Não nos responsabilizamos por indisponibilidades temporárias.</p>
+      <p>Podemos adicionar, modificar ou remover funcionalidades a qualquer momento. Mudanças que reduzam significativamente o valor do plano pago vigente serão comunicadas com antecedência razoável e, sempre que aplicável, com opção justa de saída.</p>
+      <p>Podemos também atualizar estes Termos. Mudanças relevantes serão comunicadas por e-mail e/ou notificação dentro do app antes de entrarem em vigor. Continuar usando o app após a vigência implica aceitação dos Termos atualizados.</p>
+
+      <h2 id="suspensao"><span class="num">12</span>Suspensão e encerramento</h2>
+      <p>Podemos suspender ou encerrar sua conta, com ou sem aviso prévio, em caso de descumprimento destes Termos, fraude, abuso ou risco à segurança do serviço ou de outros usuários. Em casos graves, o encerramento será definitivo e sem reembolso.</p>
+      <p>Você também pode encerrar sua conta a qualquer momento — veja a página <a href="exclusao-conta.html">Exclusão de conta</a>.</p>
+
+      <h2 id="responsabilidade"><span class="num">13</span>Limitação de responsabilidade</h2>
+      <p>O GameTrack é uma ferramenta de acompanhamento pessoal. Não nos responsabilizamos por:</p>
+      <ul>
+        <li>Decisões tomadas com base em sugestões geradas por IA ou em estatísticas do app.</li>
+        <li>Conteúdo postado por outros usuários na comunidade.</li>
+        <li>Perda de dados decorrente de falha do dispositivo do usuário, exclusão pelo próprio usuário ou desinstalação do app antes de sincronização.</li>
+        <li>Indisponibilidades de serviços de terceiros (Supabase, InfinitePay, Apple, Google) que afetem o funcionamento do app.</li>
+        <li>Danos indiretos, lucros cessantes ou prejuízos remotos, dentro dos limites permitidos pela legislação brasileira.</li>
+      </ul>
+      <p>Nada nestes Termos limita responsabilidades que, por lei, não possam ser limitadas — em especial as previstas no Código de Defesa do Consumidor.</p>
+
+      <h2 id="lei"><span class="num">14</span>Lei aplicável e foro</h2>
+      <p>Estes Termos são regidos pelas <b>leis da República Federativa do Brasil</b>, em especial o Código Civil, o Código de Defesa do Consumidor (Lei 8.078/1990), o Marco Civil da Internet (Lei 12.965/2014) e a Lei Geral de Proteção de Dados (Lei 13.709/2018).</p>
+      <p>Fica eleito o foro da comarca de <span class="placeholder">[CIDADE/UF]</span>, com renúncia a qualquer outro, por mais privilegiado que seja, para dirimir controvérsias decorrentes destes Termos, ressalvado o direito do consumidor de ajuizar ação no foro do seu próprio domicílio.</p>
+
+      <h2 id="contato"><span class="num">15</span>Contato</h2>
+      <p>Empresa: <span class="placeholder">[NOME DA EMPRESA]</span> · CNPJ <span class="placeholder">[CNPJ se houver]</span></p>
+      <p>Endereço: <span class="placeholder">[ENDEREÇO]</span></p>
+      <p>E-mail: <a href="mailto:[EMAIL DE SUPORTE]">[EMAIL DE SUPORTE]</a></p>
+
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="foot-in">
+    <div class="logo" style="font-size:16px"><img class="mark" src="apple-touch-icon.png" alt="GameTrack" style="width:26px;height:26px"> GameTrack</div>
+    <div class="foot-links">
+      <a href="privacidade.html">Privacidade</a>
+      <a href="termos.html">Termos</a>
+      <a href="suporte.html">Suporte</a>
+      <a href="exclusao-conta.html">Exclusão de conta</a>
+    </div>
+    <div>© 2026 GameTrack</div>
+  </div>
+</footer>
+
+</body>
+</html>

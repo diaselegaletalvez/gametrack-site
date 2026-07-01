@@ -1,0 +1,274 @@
+<!-- RASCUNHO: revisar com profissional antes de publicar, especialmente cláusulas sobre menores -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suporte — GameTrack</title>
+<meta name="description" content="Central de ajuda do GameTrack: entre em contato, tire dúvidas e veja o FAQ.">
+<meta name="robots" content="index,follow">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0B0B0F; --bg2:#0E0E15; --card:#16161F; --card2:#1C1C28;
+    --border:#262633; --primary:#6D4AFF; --primary2:#8B6BFF;
+    --text:#FFFFFF; --muted:#8A8A95; --green:#22C55E; --gold:#F5B100;
+    --display:'Space Grotesk',sans-serif; --body:'Inter',sans-serif; --mono:'JetBrains Mono',monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:var(--body);line-height:1.7;-webkit-font-smoothing:antialiased}
+  a{color:var(--primary2);text-decoration:none}
+  a:hover{color:var(--text)}
+  .wrap{max-width:880px;margin:0 auto;padding:0 22px}
+
+  nav{position:sticky;top:0;z-index:50;background:rgba(11,11,15,.72);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1080px;margin:0 auto;padding:0 22px}
+  .logo{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:19px;letter-spacing:-.3px;color:var(--text)}
+  .logo .mark{width:30px;height:30px;border-radius:9px;object-fit:cover;border:1px solid var(--border)}
+  .nav-links{display:flex;align-items:center;gap:26px;font-size:14px;color:var(--muted)}
+  .nav-links a{color:var(--muted)}
+  .nav-links a:hover{color:var(--text)}
+
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--primary2)}
+  .legal{padding:64px 0 80px;position:relative}
+  .glow{position:absolute;inset:0 0 auto 0;height:360px;pointer-events:none;background:radial-gradient(620px 280px at 18% 0%,rgba(109,74,255,.18),transparent 70%)}
+  .legal-head{position:relative;margin-bottom:36px}
+  h1{font-family:var(--display);font-weight:700;font-size:clamp(30px,4.5vw,46px);line-height:1.05;letter-spacing:-1px;margin:14px 0 14px}
+  h1 .hl{background:linear-gradient(120deg,var(--primary2),#3FA9FF);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lead{color:var(--muted);font-size:18px;margin-top:6px;max-width:660px}
+
+  .app-card{position:relative;display:flex;gap:18px;align-items:center;background:linear-gradient(180deg,var(--card),#12121a);border:1px solid var(--border);border-radius:18px;padding:22px;margin:8px 0 36px;box-shadow:0 24px 60px -40px rgba(109,74,255,.5)}
+  .app-card img{width:64px;height:64px;border-radius:14px;border:1px solid var(--border);object-fit:cover}
+  .app-card h2{font-family:var(--display);font-size:20px;margin-bottom:4px}
+  .app-card p{color:var(--muted);font-size:14px}
+
+  .contact{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:0 0 50px}
+  @media(max-width:640px){.contact{grid-template-columns:1fr}}
+  .ccard{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;transition:border-color .2s,transform .2s;display:block}
+  .ccard:hover{border-color:var(--primary);transform:translateY(-2px)}
+  .ccard .ico{width:42px;height:42px;border-radius:12px;background:var(--card2);display:grid;place-items:center;font-size:20px;margin-bottom:12px}
+  .ccard h3{font-family:var(--display);font-size:17px;color:var(--text);margin-bottom:4px}
+  .ccard p{color:var(--muted);font-size:14px;margin-bottom:8px}
+  .ccard .link{font-family:var(--mono);font-size:13px;color:var(--primary2)}
+
+  h2.sec{font-family:var(--display);font-weight:700;font-size:26px;letter-spacing:-.4px;color:var(--text);margin:48px 0 18px}
+  .sub{color:var(--muted);font-size:15px;margin:-8px 0 22px}
+
+  .faq details{border:1px solid var(--border);border-radius:14px;padding:0 22px;margin-bottom:12px;background:var(--card);overflow:hidden}
+  .faq summary{font-family:var(--display);font-weight:600;font-size:16px;padding:18px 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--text)}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:'+';color:var(--primary2);font-size:22px;font-weight:400;transition:transform .2s}
+  .faq details[open] summary::after{transform:rotate(45deg)}
+  .faq .a{color:#d7d7de;font-size:15px;padding:0 0 22px}
+  .faq .a p{margin-bottom:10px}
+  .faq .a ol{padding-left:20px;color:#d7d7de}
+  .faq .a ol li{margin-bottom:6px}
+  .faq .a b{color:var(--text)}
+
+  .doc-links{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+  @media(max-width:640px){.doc-links{grid-template-columns:1fr}}
+  .doc-links a{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;display:block;transition:border-color .2s,transform .2s}
+  .doc-links a:hover{border-color:var(--primary);transform:translateY(-2px)}
+  .doc-links h4{font-family:var(--display);font-size:15px;color:var(--text);margin-bottom:4px}
+  .doc-links p{color:var(--muted);font-size:13px}
+
+  .draft{background:rgba(245,177,0,.08);border:1px solid rgba(245,177,0,.4);border-radius:12px;padding:14px 18px;margin:0 0 28px;color:var(--gold);font-size:13px;font-family:var(--mono)}
+  .placeholder{background:var(--card2);border:1px dashed var(--border);border-radius:6px;padding:1px 8px;font-family:var(--mono);font-size:13px;color:var(--gold)}
+
+  footer{border-top:1px solid var(--border);padding:34px 0;color:var(--muted);font-size:14px;margin-top:50px}
+  .foot-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;max-width:1080px;margin:0 auto;padding:0 22px}
+  .foot-links{display:flex;gap:18px;flex-wrap:wrap}
+  .foot-links a{color:var(--muted)}
+  .foot-links a:hover{color:var(--text)}
+
+  :focus-visible{outline:2px solid var(--primary2);outline-offset:3px;border-radius:6px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="index.html"><img class="mark" src="apple-touch-icon.png" alt="GameTrack"> GameTrack</a>
+    <div class="nav-links">
+      <a href="index.html">← Voltar ao site</a>
+    </div>
+  </div>
+</nav>
+
+<main class="legal">
+  <div class="glow"></div>
+  <div class="wrap">
+    <header class="legal-head">
+      <span class="eyebrow">Central de ajuda</span>
+      <h1>Suporte <span class="hl">GameTrack</span></h1>
+      <p class="lead">Tudo que você precisa pra usar o app, ativar seu plano ou falar com a gente. Se a resposta não estiver aqui, é só mandar um e-mail.</p>
+    </header>
+
+    <div class="draft">⚠ RASCUNHO — não publicar sem revisão por um profissional. Atenção especial às cláusulas sobre menores.</div>
+
+    <div class="app-card">
+      <img src="apple-touch-icon.png" alt="Ícone do GameTrack">
+      <div>
+        <h2>GameTrack</h2>
+        <p>App de acompanhamento de jogos: registre sua biblioteca, horas, conquistas, suba de nível, colecione recompensas e participe da comunidade. Disponível para iPhone, Android, Mac e Windows.</p>
+      </div>
+    </div>
+
+    <h2 class="sec">Fale com a gente</h2>
+    <p class="sub">Respondemos em até 2 dias úteis (na maioria das vezes bem antes).</p>
+    <div class="contact">
+      <a class="ccard" href="mailto:[EMAIL DE SUPORTE]">
+        <div class="ico">✉</div>
+        <h3>E-mail de suporte</h3>
+        <p>Bugs, dúvidas, ativação de plano, reembolso e qualquer outro assunto.</p>
+        <div class="link">[EMAIL DE SUPORTE]</div>
+      </a>
+      <a class="ccard" href="mailto:[EMAIL DE PRIVACIDADE]">
+        <div class="ico">🔒</div>
+        <h3>Privacidade e LGPD</h3>
+        <p>Pedidos sobre seus dados pessoais, exclusão de conta, controle parental.</p>
+        <div class="link">[EMAIL DE PRIVACIDADE]</div>
+      </a>
+    </div>
+
+    <h2 class="sec">Perguntas frequentes</h2>
+    <p class="sub">As dúvidas mais comuns dos jogadores.</p>
+
+    <div class="faq">
+
+      <details open>
+        <summary>Como criar uma conta no GameTrack?</summary>
+        <div class="a">
+          <ol>
+            <li>Baixe o GameTrack na <b>App Store</b> (iPhone/iPad) ou na <b>Google Play</b> (Android), ou instale a versão para Mac/Windows.</li>
+            <li>Abra o app e toque em <b>Criar conta</b>.</li>
+            <li>Informe seu e-mail, uma senha, seu nome, uma gametag (apelido público) e sua data de nascimento.</li>
+            <li>Confirme o e-mail clicando no link que enviamos pra você.</li>
+            <li>Pronto — você já pode adicionar seus primeiros jogos.</li>
+          </ol>
+          <p>Se você tem menos de 18 anos, precisa do consentimento dos seus pais ou responsáveis legais para criar a conta.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Como ativar um plano pago com código?</summary>
+        <div class="a">
+          <p>Os planos pagos do GameTrack são comprados <b>fora do app</b>, em uma página de checkout segura da InfinitePay. Após o pagamento, você recebe um <b>código de ativação único</b> no seu e-mail.</p>
+          <ol>
+            <li>Abra o GameTrack e entre na sua conta.</li>
+            <li>Vá em <b>Configurações → Plano → Ativar código</b>.</li>
+            <li>Cole o código recebido por e-mail e toque em <b>Ativar</b>.</li>
+            <li>Os recursos do plano são liberados imediatamente na sua conta.</li>
+          </ol>
+          <p>Cada código só pode ser usado uma vez e fica vinculado à sua conta. Não compartilhe nem revenda — códigos compartilhados são invalidados sem reembolso.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Como excluir minha conta e meus dados?</summary>
+        <div class="a">
+          <p>Você pode excluir tudo direto pelo app:</p>
+          <ol>
+            <li>Abra o GameTrack e entre na sua conta.</li>
+            <li>Vá em <b>Configurações → Conta → Excluir conta</b>.</li>
+            <li>Confirme com sua senha.</li>
+          </ol>
+          <p>Sua conta e seus dados são removidos do nosso banco em até 30 dias. Se preferir, escreva pra <a href="mailto:[EMAIL DE SUPORTE]">[EMAIL DE SUPORTE]</a> a partir do e-mail cadastrado pedindo a exclusão manual.</p>
+          <p>Veja o passo a passo completo na página <a href="exclusao-conta.html">Exclusão de conta</a>.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Esqueci minha senha — o que faço?</summary>
+        <div class="a">
+          <p>Na tela de login, toque em <b>Esqueci minha senha</b> e informe seu e-mail. Você vai receber um link pra criar uma senha nova. Se o e-mail não chegar em alguns minutos, confira a caixa de spam e o filtro de promoções antes de tentar de novo.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Posso pedir reembolso de um plano?</summary>
+        <div class="a">
+          <p>Sim. Pelo Código de Defesa do Consumidor (art. 49), você tem <b>7 dias corridos</b> a partir do pagamento pra se arrepender, desde que o código de ativação ainda não tenha sido usado. Depois de ativado, o reembolso passa a depender de análise caso a caso.</p>
+          <p>Pra pedir, escreva pra <a href="mailto:[EMAIL DE SUPORTE]">[EMAIL DE SUPORTE]</a> informando o código do pedido na InfinitePay.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>O app conecta com Steam, Xbox ou PlayStation?</summary>
+        <div class="a">
+          <p>Ainda não. A sincronização automática com Steam e Xbox está prevista e será opcional — você precisa autorizar explicitamente. Por enquanto, o registro de jogos, horas e conquistas é manual.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Meu filho menor de 18 anos pode usar o GameTrack?</summary>
+        <div class="a">
+          <p>A idade mínima é <b>13 anos</b>, e menores de 18 precisam de autorização dos pais/responsáveis. No <b>Plano Família</b>, você cria perfis filhos vinculados à sua conta, com aprovação, metas, limites de tempo de uso e relatórios de atividade.</p>
+          <p>Dados de perfis infantis são tratados com cuidado especial — eles não aparecem em áreas públicas da comunidade e não recebem mensagens diretas de adultos desconhecidos. Detalhes na <a href="privacidade.html#menores">Política de Privacidade</a>.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Como funcionam as sugestões por IA?</summary>
+        <div class="a">
+          <p>Algumas funcionalidades dos planos Premium, Elite e Youtuber usam IA pra sugerir jogos, ideias ou análises. Essas sugestões são <b>auxílio, não verdade absoluta</b> — podem conter erros. Use com bom senso e cheque informações importantes antes de tomar decisões.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Quais aparelhos são suportados?</summary>
+        <div class="a">
+          <p>iPhone e iPad (iOS), telefones e tablets Android, computadores macOS e Windows. As versões exatas suportadas ficam descritas na página do app em cada loja.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Como reportar um bug ou sugerir uma funcionalidade?</summary>
+        <div class="a">
+          <p>Manda um e-mail pra <a href="mailto:[EMAIL DE SUPORTE]">[EMAIL DE SUPORTE]</a> com o assunto começando por <code>[BUG]</code> ou <code>[SUGESTÃO]</code>. Inclua, sempre que possível, modelo do aparelho, versão do sistema operacional, versão do app e prints de tela. Isso ajuda demais a resolver rápido.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <h2 class="sec">Documentos importantes</h2>
+    <p class="sub">Leia também:</p>
+    <div class="doc-links">
+      <a href="privacidade.html">
+        <h4>Política de Privacidade</h4>
+        <p>Quais dados coletamos, como usamos e seus direitos pela LGPD.</p>
+      </a>
+      <a href="termos.html">
+        <h4>Termos de Uso</h4>
+        <p>Regras, planos, reembolso e limitações de responsabilidade.</p>
+      </a>
+      <a href="exclusao-conta.html">
+        <h4>Exclusão de conta</h4>
+        <p>Passo a passo para apagar sua conta e seus dados.</p>
+      </a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="foot-in">
+    <div class="logo" style="font-size:16px"><img class="mark" src="apple-touch-icon.png" alt="GameTrack" style="width:26px;height:26px"> GameTrack</div>
+    <div class="foot-links">
+      <a href="privacidade.html">Privacidade</a>
+      <a href="termos.html">Termos</a>
+      <a href="suporte.html">Suporte</a>
+      <a href="exclusao-conta.html">Exclusão de conta</a>
+    </div>
+    <div>© 2026 GameTrack</div>
+  </div>
+</footer>
+
+</body>
+</html>
