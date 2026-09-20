@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GameTrack — Sua jornada gamer em um só lugar</title>
-<meta name="description" content="GameTrack é o seu hub pessoal de jogos: rastreie jogos, horas, conquistas, suba de nível e evolua. Em breve para iPhone, Android, Mac e Windows.">
+<meta name="description" content="GameTrack é o seu hub pessoal de jogos: rastreie jogos, horas, conquistas, suba de nível e evolua. Em breve para iPhone e Android.">
 <meta property="og:title" content="GameTrack — Sua jornada gamer em um só lugar">
 <meta property="og:description" content="Rastreie seus jogos, horas e conquistas. Suba de nível. GameTrack é o seu hub pessoal de jogos.">
 <meta property="og:type" content="website">
@@ -80,10 +80,13 @@
   .dls{display:flex;flex-wrap:wrap;gap:12px}
   .dl{position:relative;display:flex;align-items:center;gap:11px;background:var(--card);border:1px solid var(--border);border-radius:13px;padding:12px 16px;min-width:172px;cursor:not-allowed;transition:border-color .2s}
   .dl:hover{border-color:var(--primary)}
+  .dl.off{opacity:.5;pointer-events:none}
+  .dl.off:hover{border-color:var(--border)}
   .dl .ico{font-size:22px;line-height:1}
   .dl small{display:block;color:var(--muted);font-size:11px}
   .dl strong{font-family:var(--display);font-size:15px;font-weight:600}
   .soon{position:absolute;top:-9px;right:10px;font-family:var(--mono);font-size:9px;letter-spacing:1px;background:var(--primary);color:#fff;padding:2px 7px;border-radius:99px;text-transform:uppercase}
+  .soon.na{background:var(--card2);color:var(--muted);border:1px solid var(--border)}
 
   /* SECTIONS */
   section{padding:74px 0}
@@ -215,7 +218,6 @@
       </div>
       <div class="hero-meta">
         <div><b>iPhone · Android</b>App nativo</div>
-        <div><b>Mac · Windows</b>Versão desktop</div>
         <div><b>Grátis</b>Para começar</div>
       </div>
     </div>
@@ -253,8 +255,8 @@
       <div class="feat"><div class="fi">🏆</div><h3>Conquistas & XP</h3><p>Registre conquistas por raridade, ganhe XP e suba de nível conforme avança.</p></div>
       <div class="feat"><div class="fi">📊</div><h3>Stats & análises</h3><p>Horas totais, gêneros mais jogados, conclusão média e status — tudo num painel.</p></div>
       <div class="feat"><div class="fi">🐾</div><h3>Pets & recompensas</h3><p>Colecione companheiros, complete missões e troque pontos por itens na loja.</p></div>
-      <div class="feat"><div class="fi">👥</div><h3>Comunidade</h3><p>Encontre outros jogadores, adicione amigos e acompanhe quem joga junto.</p></div>
-      <div class="feat"><div class="fi">🔗</div><h3>Conexões <span style="font-family:var(--mono);font-size:10px;color:var(--primary2)">EM BREVE</span></h3><p>Sincronize seu tempo de jogo da Steam e do Xbox automaticamente.</p></div>
+      <div class="feat"><div class="fi">👥</div><h3>Comunidade</h3><p>Encontre outros jogadores e adicione amigos.</p></div>
+      <div class="feat"><div class="fi">🔗</div><h3>Conexões <span style="font-family:var(--mono);font-size:10px;color:var(--primary2)">EM BREVE</span></h3><p>A sincronização automática com Steam e Xbox não está disponível agora.</p></div>
     </div>
   </div>
 </section>
@@ -267,7 +269,7 @@
       <p>Do download ao próximo nível em três passos.</p>
     </div>
     <div class="steps">
-      <div class="step"><div class="num">01</div><h3>Baixe o app</h3><p>Instale no celular ou no computador. Crie sua conta em segundos e entre no seu hub.</p></div>
+      <div class="step"><div class="num">01</div><h3>Baixe o app</h3><p>Instale no iPhone ou no Android. Crie sua conta em segundos e entre no seu hub.</p></div>
       <div class="step"><div class="num">02</div><h3>Registre seus jogos</h3><p>Adicione os jogos que você joga, suas horas e conquistas. Marque favoritos e status.</p></div>
       <div class="step"><div class="num">03</div><h3>Evolua</h3><p>Ganhe XP e pontos, suba de nível, colecione pets e veja sua jornada crescer no painel.</p></div>
     </div>
@@ -327,12 +329,12 @@
     <div class="dl-box">
       <span class="eyebrow">Disponível em breve</span>
       <h2>Baixe o GameTrack</h2>
-      <p>Estamos finalizando os apps. Escolha sua plataforma — os links chegam no lançamento.</p>
+      <p>Estamos finalizando os apps para iPhone e Android. Os links das lojas chegam no lançamento.</p>
       <div class="dls">
         <div class="dl"><span class="soon">Em breve</span><span class="ico"></span><div><small>Baixar na</small><strong>App Store</strong></div></div>
         <div class="dl"><span class="soon">Em breve</span><span class="ico">▶</span><div><small>Baixar no</small><strong>Google Play</strong></div></div>
-        <div class="dl"><span class="soon">Em breve</span><span class="ico">🖥</span><div><small>Instalar no</small><strong>Mac</strong></div></div>
-        <div class="dl"><span class="soon">Em breve</span><span class="ico">🪟</span><div><small>Instalar no</small><strong>Windows</strong></div></div>
+        <div class="dl off" aria-disabled="true"><span class="soon na">Indisponível</span><span class="ico">🖥</span><div><small>Não no lançamento</small><strong>Mac</strong></div></div>
+        <div class="dl off" aria-disabled="true"><span class="soon na">Indisponível</span><span class="ico">🪟</span><div><small>Não no lançamento</small><strong>Windows</strong></div></div>
       </div>
       <div class="notify">
         <p>Quer ser avisado assim que o GameTrack lançar?</p>
@@ -356,7 +358,7 @@
     </div>
     <div class="pay-note">
       <span>💳</span>
-      <div>Pagamento via <b>InfinitePay</b> e ativação por código chegam no lançamento. Por enquanto, os planos abaixo são uma prévia dos preços.</div>
+      <div>Pagamento via <b>InfinitePay</b> e ativação por código. Os planos abaixo mostram os preços.</div>
     </div>
     <div class="plans">
 
@@ -407,7 +409,7 @@
         <p class="pdesc">A experiência completa.</p>
         <ul>
           <li>Tudo do Premium</li>
-          <li>Comparação com amigos</li>
+          <li class="soon">Comparação com amigos</li>
           <li>Personalização do painel</li>
           <li>Suporte VIP</li>
           <li class="soon">Acesso antecipado a novidades</li>
@@ -465,9 +467,9 @@
       <h2>Perguntas frequentes</h2>
     </div>
     <details open><summary>O que é o GameTrack?</summary><p>Um app pra acompanhar sua vida gamer: registre os jogos que você joga, suas horas e conquistas, suba de nível e veja tudo num painel só. Com pets, recompensas e comunidade no caminho.</p></details>
-    <details><summary>Quanto custa?</summary><p>Tem plano grátis pra começar. Planos pagos com recursos extras vão existir, mas isso vem mais pra frente — no lançamento você consegue usar de graça.</p></details>
-    <details><summary>Em quais aparelhos funciona?</summary><p>iPhone e iPad (App Store), Android (Google Play), e versão desktop pra Mac e Windows.</p></details>
-    <details><summary>Preciso conectar minha conta da Steam ou Xbox?</summary><p>Não. Você pode registrar suas horas e jogos manualmente. A sincronização com Steam e Xbox é opcional e chega depois do lançamento.</p></details>
+    <details><summary>Quanto custa?</summary><p>Tem plano grátis pra começar. Os planos pagos e os preços estão na seção de planos.</p></details>
+    <details><summary>Em quais aparelhos funciona?</summary><p>iPhone e iPad (App Store) e Android (Google Play). Mac e Windows não estão disponíveis no lançamento.</p></details>
+    <details><summary>Preciso conectar minha conta da Steam ou Xbox?</summary><p>Não. Você registra horas e jogos manualmente. A sincronização com Steam e Xbox não está disponível agora.</p></details>
     <details><summary>Quando lança?</summary><p>Está em desenvolvimento agora. Volte aqui — os botões de download ficam ativos assim que os apps saírem.</p></details>
   </div>
 </section>
